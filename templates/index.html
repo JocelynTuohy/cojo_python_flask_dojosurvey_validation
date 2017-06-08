@@ -5,9 +5,9 @@
     <meta charset='utf-8' />
   </head>
   <body>
-    <form action="/result" method="post">
-      Your Name: <input type="text" name="name">
-      Your Favorite Dinosaur:
+    <form action="/submit" method="post">
+      <p>Your Name: <input type="text" name="name"></p>
+      <p>Your Favorite Dinosaur:
       <select name="dinosaur" id="dinosaur">
         <option value="Microraptor">Microraptor</option>
         <option value="Dromaeosaurus">Dromaeosaurus</option>
@@ -19,13 +19,13 @@
         <option value="Giraffatitan">Giraffatitan</option>
         <option value="Iguanadon">Iguanadon</option>
         <option value="Heterodontosaurus">Heterodontosaurus</option>
-      </select>
-      Your Favorite Beatle:
+      </select></p>
+      <p>Your Favorite Beatle:
       <input type="radio" name="beatle" value="John Lennon">John Lennon
       <input type="radio" name="beatle" value="Paul McCartney">Paul McCartney
       <input type="radio" name="beatle" value="George Harrison">George Harrison
       <input type="radio" name="beatle" value="Ringo Starr">Ringo Starr
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit"></p>
     </form>
   </body>
 </html>
