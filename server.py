@@ -14,8 +14,9 @@ def submit():
     name = request.form['name']
     dinosaur = request.form['dinosaur']
     beatle = request.form['beatle']
+    comment = request.form['comment']
     return render_template('result.html', name=name, dinosaur=dinosaur,
-                           beatle=beatle)
+                           beatle=beatle, comment=comment)
 
 app.run(debug=True)
 # Nothing after the debug line will be read.
