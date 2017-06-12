@@ -5,7 +5,7 @@
     <meta charset='utf-8' />
   </head>
   <body>
-    <form action="/submit" method="post">
+    <form action="/submit" method="POST">
       <p>Your Name: <input type="text" name="name"></p>
       <p>Your Favorite Dinosaur:
       <select name="dinosaur" id="dinosaur">
@@ -25,9 +25,16 @@
       <input type="radio" name="beatle" value="Paul McCartney">Paul McCartney
       <input type="radio" name="beatle" value="George Harrison">George Harrison
       <input type="radio" name="beatle" value="Ringo Starr">Ringo Starr
-      <p>Comment (optional):</p>
+      <p>Comment (max 120 characters):</p>
       <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
       <input type="submit" value="Submit"></p>
     </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
   </body>
 </html>
